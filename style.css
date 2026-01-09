@@ -368,13 +368,14 @@ footer {
     }
 }
 
---text-primary: #ffffff;
---text-secondary: #a0a0a0;
---accent: #ff4757;
-/* Dragon Red? Or maybe stick to a cool blue? Let's try Electric Violet/Blue mix */
---accent-glow: #3742fa;
---gradient-1: #2f3542;
---gradient-2: #57606f;
+:root {
+    --text-primary: #ffffff;
+    --text-secondary: #a0a0a0;
+    --accent: #ff4757;
+    /* Dragon Red? Or maybe stick to a cool blue? Let's try Electric Violet/Blue mix */
+    --accent-glow: #3742fa;
+    --gradient-1: #2f3542;
+    --gradient-2: #57606f;
 }
 
 * {
@@ -720,5 +721,109 @@ footer {
 
     h1 {
         font-size: 2.5rem;
+    }
+}
+
+/* New Launcher Section */
+.launcher-highlight {
+    padding: 6rem 10%;
+    background: linear-gradient(180deg, rgba(13, 11, 20, 0.5) 0%, rgba(22, 18, 33, 0.8) 100%);
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    position: relative;
+    overflow: hidden;
+}
+
+.launcher-highlight::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    right: 0;
+    width: 400px;
+    height: 400px;
+    background: radial-gradient(circle, rgba(255, 71, 87, 0.1) 0%, transparent 70%);
+    filter: blur(80px);
+    z-index: 0;
+}
+
+.content-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 4rem;
+    position: relative;
+    z-index: 1;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.launcher-visual {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+.launcher-logo {
+    max-width: 100%;
+    width: 400px;
+    height: auto;
+    filter: drop-shadow(0 0 20px rgba(0, 0, 0, 0.5));
+    transition: transform 0.3s ease;
+}
+
+.launcher-logo:hover {
+    transform: scale(1.05) rotate(-2deg);
+}
+
+.launcher-info {
+    flex: 1.2;
+}
+
+.new-badge {
+    background: linear-gradient(45deg, #ff4757, #ff6b81);
+    color: white;
+    border: none;
+    box-shadow: 0 4px 15px rgba(255, 71, 87, 0.3);
+}
+
+.launcher-info h2 {
+    font-size: 3rem;
+    font-weight: 800;
+    margin-bottom: 1.5rem;
+    line-height: 1.1;
+    background: linear-gradient(90deg, #ffffff, #dfe6e9);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.launcher-info p {
+    font-size: 1.1rem;
+    color: var(--text-secondary);
+    margin-bottom: 2.5rem;
+    max-width: 90%;
+}
+
+.btn-large {
+    padding: 1.2rem 3rem;
+    font-size: 1.2rem;
+}
+
+@media (max-width: 968px) {
+    .content-wrapper {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .launcher-info {
+        padding: 0 1rem;
+    }
+
+    .launcher-info p {
+        margin: 0 auto 2.5rem auto;
+    }
+
+    .launcher-logo {
+        width: 300px;
+        margin-bottom: 2rem;
     }
 }
