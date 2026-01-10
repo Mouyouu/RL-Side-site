@@ -1,11 +1,11 @@
 :root {
-    --bg-dark: #0d0b14;
-    --bg-panel: #161221;
+    --bg-dark: #0a0a0a;
+    --bg-panel: #141414;
     --text-primary: #ffffff;
     --text-secondary: #bdc3c7;
-    --accent: #9b59b6;
-    --accent-glow: #8e44ad;
-    --border-color: #3e3057;
+    --accent: #ff0000;
+    --accent-glow: #b30000;
+    --border-color: #333333;
 }
 
 * {
@@ -120,7 +120,7 @@ nav a:hover {
     transform: translate(-50%, -50%);
     width: 600px;
     height: 400px;
-    background: radial-gradient(circle, rgba(155, 89, 182, 0.15) 0%, transparent 60%);
+    background: radial-gradient(circle, rgba(255, 0, 0, 0.15) 0%, transparent 60%);
     filter: blur(80px);
     z-index: -1;
 }
@@ -131,7 +131,7 @@ nav a:hover {
 }
 
 .badge {
-    background: #2c2538;
+    background: rgba(255, 0, 0, 0.1);
     color: var(--accent);
     padding: 6px 10px;
     font-size: 0.75rem;
@@ -141,6 +141,13 @@ nav a:hover {
     border: 1px solid var(--border-color);
     display: inline-block;
     margin-bottom: 1.5rem;
+}
+
+.fantasy-logo {
+    width: 300px;
+    height: auto;
+    display: block;
+    margin-bottom: 2rem;
 }
 
 h1 {
@@ -180,14 +187,14 @@ p {
 
     /* Square look */
     border: 1px solid rgba(255, 255, 255, 0.2);
-    box-shadow: 0 0 0 4px rgba(155, 89, 182, 0.2);
+    box-shadow: 0 0 0 4px rgba(255, 0, 0, 0.2);
 
     transition: all 0.2s;
 }
 
 .btn-primary:hover {
     background: var(--accent-glow);
-    box-shadow: 0 0 0 6px rgba(155, 89, 182, 0.4);
+    box-shadow: 0 0 0 6px rgba(255, 0, 0, 0.4);
     transform: translateY(-2px);
 }
 
@@ -230,7 +237,7 @@ p {
     background: var(--bg-panel);
     border: 2px solid var(--accent);
     position: relative;
-    box-shadow: 0 0 30px rgba(155, 89, 182, 0.2);
+    box-shadow: 0 0 30px rgba(255, 0, 0, 0.2);
 
     /* Decoration */
     display: flex;
@@ -368,366 +375,10 @@ footer {
     }
 }
 
-:root {
-    --text-primary: #ffffff;
-    --text-secondary: #a0a0a0;
-    --accent: #ff4757;
-    /* Dragon Red? Or maybe stick to a cool blue? Let's try Electric Violet/Blue mix */
-    --accent-glow: #3742fa;
-    --gradient-1: #2f3542;
-    --gradient-2: #57606f;
-}
-
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Inter', sans-serif;
-}
-
-body {
-    background-color: var(--bg-dark);
-    color: var(--text-primary);
-    overflow-x: hidden;
-}
-
-/* Background Atmosphere */
-.background-glow {
-    position: absolute;
-    top: -20%;
-    left: -10%;
-    width: 50vw;
-    height: 50vh;
-    background: radial-gradient(circle, rgba(55, 66, 250, 0.4) 0%, rgba(0, 0, 0, 0) 70%);
-    filter: blur(100px);
-    z-index: -1;
-    animation: pulse 10s infinite alternate;
-}
-
-@keyframes pulse {
-    0% {
-        transform: scale(1);
-        opacity: 0.5;
-    }
-
-    100% {
-        transform: scale(1.2);
-        opacity: 0.8;
-    }
-}
-
-/* Header */
-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 2rem 5%;
-    backdrop-filter: blur(10px);
-    position: sticky;
-    top: 0;
-    z-index: 100;
-}
-
-.logo {
-    font-weight: 800;
-    font-size: 1.5rem;
-    letter-spacing: -1px;
-}
-
-.highlight {
-    color: var(--accent-glow);
-}
-
-nav ul {
-    display: flex;
-    list-style: none;
-    gap: 2rem;
-    align-items: center;
-}
-
-nav a {
-    text-decoration: none;
-    color: var(--text-secondary);
-    font-weight: 500;
-    transition: color 0.3s;
-}
-
-nav a:hover {
-    color: var(--text-primary);
-}
-
-.nav-cta {
-    background: rgba(255, 255, 255, 0.1);
-    padding: 0.5rem 1.5rem;
-    border-radius: 20px;
-    color: white !important;
-    transition: all 0.3s;
-}
-
-.nav-cta:hover {
-    background: var(--accent-glow);
-    box-shadow: 0 0 15px var(--accent-glow);
-}
-
-/* Hero Section */
-.hero {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
-    min-height: 80vh;
-    padding: 0 10%;
-}
-
-.hero-content {
-    max-width: 600px;
-    z-index: 2;
-}
-
-.badge {
-    background: rgba(55, 66, 250, 0.2);
-    color: #70a1ff;
-    padding: 5px 12px;
-    border-radius: 12px;
-    font-size: 0.8rem;
-    font-weight: 600;
-    margin-bottom: 1rem;
-    display: inline-block;
-}
-
-h1 {
-    font-size: 4rem;
-    line-height: 1.1;
-    margin-bottom: 1.5rem;
-    font-weight: 800;
-}
-
-.gradient-text {
-    background: linear-gradient(45deg, #3742fa, #ff4757);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-}
-
-p {
-    color: var(--text-secondary);
-    font-size: 1.1rem;
-    line-height: 1.6;
-    margin-bottom: 2.5rem;
-    max-width: 450px;
-}
-
-/* Buttons */
-.btn-primary {
-    display: inline-flex;
-    align-items: center;
-    background: white;
-    color: black;
-    padding: 1rem 2rem;
-    border-radius: 50px;
-    text-decoration: none;
-    font-weight: 700;
-    font-size: 1.1rem;
-    transition: transform 0.2s, box-shadow 0.2s;
-}
-
-.btn-primary:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 10px 20px rgba(255, 255, 255, 0.2);
-}
-
-.btn-primary .icon {
-    margin-right: 0.5rem;
-    font-size: 1.2rem;
-}
-
-.platform-info {
-    margin-top: 0.8rem;
-    font-size: 0.8rem;
-    color: var(--text-secondary);
-    opacity: 0.7;
-}
-
-/* Glass Visual */
-.glass-card {
-    width: 350px;
-    height: 450px;
-    background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.02));
-    backdrop-filter: blur(20px);
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    border-radius: 24px;
-    position: relative;
-    padding: 20px;
-    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
-    display: flex;
-    flex-direction: column;
-    animation: float 6s ease-in-out infinite;
-}
-
-@keyframes float {
-    0% {
-        transform: translateY(0);
-    }
-
-    50% {
-        transform: translateY(-20px);
-    }
-
-    100% {
-        transform: translateY(0);
-    }
-}
-
-.card-header {
-    display: flex;
-    gap: 8px;
-    margin-bottom: 40px;
-}
-
-.dot {
-    width: 12px;
-    height: 12px;
-    border-radius: 50%;
-    opacity: 0.8;
-}
-
-.red {
-    background: #ff5f57;
-}
-
-.yellow {
-    background: #ffbd2e;
-}
-
-.green {
-    background: #28c940;
-}
-
-.card-body {
-    flex-grow: 1;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-}
-
-.loader {
-    width: 60px;
-    height: 60px;
-    border: 4px solid rgba(255, 255, 255, 0.1);
-    border-top: 4px solid var(--accent-glow);
-    border-radius: 50%;
-    animation: spin 1s linear infinite;
-    margin-bottom: 20px;
-}
-
-@keyframes spin {
-    0% {
-        transform: rotate(0deg);
-    }
-
-    100% {
-        transform: rotate(360deg);
-    }
-}
-
-/* Features */
-.features {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 2rem;
-    padding: 5rem 10%;
-    margin-bottom: 5rem;
-}
-
-.feature-card {
-    background: var(--bg-card);
-    padding: 2rem;
-    border-radius: 16px;
-    border: 1px solid rgba(255, 255, 255, 0.05);
-    transition: transform 0.3s;
-}
-
-.feature-card:hover {
-    transform: translateY(-5px);
-    background: rgba(255, 255, 255, 0.08);
-}
-
-.feature-card .icon {
-    font-size: 2rem;
-    margin-bottom: 1rem;
-}
-
-.feature-card h3 {
-    margin-bottom: 0.5rem;
-}
-
-/* Footer */
-footer {
-    border-top: 1px solid rgba(255, 255, 255, 0.1);
-    padding: 2rem 10%;
-}
-
-.footer-content {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    color: var(--text-secondary);
-    font-size: 0.9rem;
-}
-
-.status {
-    display: flex;
-    align-items: center;
-    gap: 8px;
-}
-
-.status-dot {
-    width: 8px;
-    height: 8px;
-    background-color: #28c940;
-    border-radius: 50%;
-    box-shadow: 0 0 10px #28c940;
-}
-
-/* Responsive */
-@media (max-width: 768px) {
-    .hero {
-        flex-direction: column;
-        text-align: center;
-        padding-top: 2rem;
-    }
-
-    .hero-content {
-        margin-bottom: 3rem;
-    }
-
-    .hero-visual {
-        width: 100%;
-        display: flex;
-        justify-content: center;
-    }
-
-    .cta-group {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .glass-card {
-        width: 100%;
-        max-width: 320px;
-    }
-
-    h1 {
-        font-size: 2.5rem;
-    }
-}
-
 /* New Launcher Section */
 .launcher-highlight {
     padding: 6rem 10%;
-    background: linear-gradient(180deg, rgba(13, 11, 20, 0.5) 0%, rgba(22, 18, 33, 0.8) 100%);
+    background: linear-gradient(180deg, rgba(10, 10, 10, 0.5) 0%, rgba(20, 20, 20, 0.8) 100%);
     border-top: 1px solid rgba(255, 255, 255, 0.05);
     border-bottom: 1px solid rgba(255, 255, 255, 0.05);
     position: relative;
@@ -765,7 +416,7 @@ footer {
 
 .launcher-logo {
     max-width: 100%;
-    width: 400px;
+    width: 600px;
     height: auto;
     filter: drop-shadow(0 0 20px rgba(0, 0, 0, 0.5));
     transition: transform 0.3s ease;
@@ -780,10 +431,10 @@ footer {
 }
 
 .new-badge {
-    background: linear-gradient(45deg, #ff4757, #ff6b81);
+    background: linear-gradient(45deg, #ff0000, #b30000);
     color: white;
     border: none;
-    box-shadow: 0 4px 15px rgba(255, 71, 87, 0.3);
+    box-shadow: 0 4px 15px rgba(255, 0, 0, 0.3);
 }
 
 .launcher-info h2 {
@@ -792,6 +443,7 @@ footer {
     margin-bottom: 1.5rem;
     line-height: 1.1;
     background: linear-gradient(90deg, #ffffff, #dfe6e9);
+    background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
@@ -800,7 +452,123 @@ footer {
     font-size: 1.1rem;
     color: var(--text-secondary);
     margin-bottom: 2.5rem;
-    max-width: 90%;
+    line-height: 1.6;
+}
+
+.launcher-actions {
+    display: flex;
+    gap: 1rem;
+}
+
+/* Cobblemon Teaser Section */
+.cobblemon-teaser {
+    padding: 6rem 10%;
+    background: #050505;
+    position: relative;
+    border-top: 1px solid var(--border-color);
+}
+
+.teaser-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 4rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.teaser-content {
+    flex: 1;
+}
+
+.teaser-subtitle {
+    color: var(--accent);
+    font-weight: 700;
+    letter-spacing: 2px;
+    font-size: 0.9rem;
+    display: block;
+    margin-bottom: 1rem;
+}
+
+.cobblemon-teaser h2 {
+    font-size: 3.5rem;
+    font-weight: 900;
+    margin-bottom: 1.5rem;
+    color: white;
+    text-transform: uppercase;
+    position: relative;
+}
+
+.cobblemon-teaser p {
+    font-size: 1.1rem;
+    color: var(--text-secondary);
+    border-left: 2px solid var(--accent);
+    padding-left: 1rem;
+}
+
+.teaser-visual {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+.image-frame {
+    position: relative;
+    width: 100%;
+    max-width: 500px;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 0 30px rgba(179, 0, 0, 0.2);
+    border: 1px solid var(--border-color);
+}
+
+.image-frame img {
+    width: 100%;
+    height: auto;
+    display: block;
+    transition: transform 0.5s ease;
+    filter: grayscale(80%) contrast(120%);
+}
+
+.image-frame:hover img {
+    transform: scale(1.05);
+    filter: grayscale(0%) contrast(100%);
+}
+
+.overlay-lock {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 3rem;
+    background: rgba(0, 0, 0, 0.6);
+    width: 80px;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    border: 2px solid rgba(255, 255, 255, 0.2);
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.image-frame:hover .overlay-lock {
+    opacity: 1;
+}
+
+@media (max-width: 900px) {
+    .teaser-container {
+        flex-direction: column-reverse;
+        text-align: center;
+    }
+
+    .cobblemon-teaser p {
+        border-left: none;
+        border-top: 2px solid var(--accent);
+        padding-top: 1rem;
+        padding-left: 0;
+    }
 }
 
 .btn-large {
@@ -821,9 +589,9 @@ footer {
     .launcher-info p {
         margin: 0 auto 2.5rem auto;
     }
+}
 
-    .launcher-logo {
-        width: 300px;
-        margin-bottom: 2rem;
-    }
+.launcher-logo {
+    width: 600px;
+    margin-bottom: 2rem;
 }
